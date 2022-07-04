@@ -51,5 +51,12 @@ console_pic4 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655
 console_pic5 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Ice_Dragon_decukc.jpg')
 puts "console_pics loaded !"
 
+puts "attaching photos to consoles"
+console1.photo.attach(io: console_pic1, filename: 'Can_opener_exf0kd', content_type: 'image/jpg')
+console1.photo.attach(io: console_pic2, filename: 'Beer_Crate_Battery_Holder_l5whll', content_type: 'image/png')
+console1.photo.attach(io: console_pic3, filename: 'Disk_Rack_Roller_fzcrow', content_type: 'image/jpg')
+console1.photo.attach(io: console_pic4, filename: 'Air_ventilation_valve_xvrkbb', content_type: 'image/jpg')
+console1.photo.attach(io: console_pic5, filename: 'Ice_Dragon_decukc', content_type: 'image/jpg')
+puts "photos attached to consoles!"
 
 puts "That's all folks !"
