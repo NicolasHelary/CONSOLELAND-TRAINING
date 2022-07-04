@@ -5,10 +5,13 @@
     </button>
   </form>
 </div>
-<div class="card-console">
+<div class="card-consoles">
   <% @consoles.each do |console| %>
+    <div class="card-console">
+    <%= cl_image_tag console.photo.key, class: "img-card-console", alt: "console Pic" %>
     <%= console.name %>
     <%= console.brand %>
     <%= console.description %>
+    </div>
   <% end %>
 </div>
