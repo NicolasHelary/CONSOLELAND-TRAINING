@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :consoles
   has_many :reservations
 
-  has_one_attached :pp
+  has_one_attached :pp, dependent: :destroy
 
   validates :first_name, presence: true
   validates :last_name, presence: true
