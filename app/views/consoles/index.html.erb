@@ -1,0 +1,16 @@
+<div class="search-bar">
+  <form class="d-flex" action="/consoles" accept-charset="UTF-8" method="get" style="width:80%">
+    <input type="text" name="query" id="query" value="" class="input-search" style="width:80%" placeholder="Find a console">
+    <button type="submit" name="commit" class="loupe" data-disable-with="Search">
+    </button>
+  </form>
+</div>
+<div class="card-console">
+  <% @consoles.each do |console| %>
+    <%= console.name %>
+    <%= console.brand %>
+    <%= console.description %>
+  <% end %>
+</div>
+
+<% console %>
