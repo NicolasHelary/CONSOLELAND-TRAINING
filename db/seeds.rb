@@ -8,9 +8,11 @@
 
 puts "destroying everything"
 
-User.destroy_all
-Console.destroy_all
 Reservation.destroy_all
+Console.destroy_all
+User.destroy_all
+
+
 
 puts "creating users"
 user1 = User.create!(first_name: "Nico", last_name: "Nounet", email: "nico@nounet.com", password: "azerty")
@@ -40,6 +42,7 @@ user_pic4 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655889
 user_pic5 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655889461/print3d/Serkan_yng975.jpg')
 puts "user_pics loaded!"
 
+
 puts "loading console_pics"
 console_pic1 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Can_opener_exf0kd.jpg')
 console_pic2 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Beer_Crate_Battery_Holder_l5whll.png')
@@ -48,11 +51,5 @@ console_pic4 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655
 console_pic5 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Ice_Dragon_decukc.jpg')
 puts "console_pics loaded !"
 
-puts "attaching console_pics to consoles"
-console1.photo.attach(io: console_pic1, filename: 'Pocket_catapult_azgfa5', content_type: 'image/jpg')
-console2.photo.attach(io: console_pic2, filename: 'Beer_Crate_Battery_Holder_l5whll', content_type: 'image/png')
-console3.photo.attach(io: console_pic3, filename: 'Disk_Rack_Roller_fzcrow', content_type: 'image/jpg')
-console4.photo.attach(io: console_pic4, filename: 'Air_ventilation_valve_xvrkbb', content_type: 'image/jpg')
-console5.photo.attach(io: console_pic5, filename: 'Ice_Dragon_decukc', content_type: 'image/jpg')
 
 puts "That's all folks !"
